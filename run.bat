@@ -1,0 +1,1 @@
+type sample.txt | python mapper.py | python reducer.py

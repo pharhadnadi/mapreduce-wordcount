@@ -1,0 +1,15 @@
+Hello this is my first file. This is supposed to be our first example. Hello again. And Hellofrom sys import stdin
+import re
+for line in stdin:
+    token = re.findall(r'\w+', line)
+    for word in token:
+        print(f'{word.lower()}\t1')from sys import stdin
+index = {}
+
+for line in stdin:
+    word, num = line.split('\t')
+
+    index.setdefault(word, 0)
+    index[word] += int(num)
+for word in index:
+    print(f'{word}\t{index[word]}')
